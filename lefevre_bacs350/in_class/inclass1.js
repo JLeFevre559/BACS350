@@ -22,9 +22,9 @@ let input_history = [];
 while(x){
     console.log("BMI Calculator");
     var input = prompt("Enter your BMI or QUIT to exit: ");
-    input_history.push(input);
     if(input.toUpperCase() == "QUIT"){
         console.log("Exiting program");
+        console.log("Input history: ", input_history);
         x = false;
     }
     else if(isNaN(input) || input < 0){
@@ -32,6 +32,7 @@ while(x){
     }
     else{
         let bmi = parseFloat(input);
+        input_history.push(bmi + " --- " + bmi_calculator(bmi));
         console.log(input, "is", bmi_calculator(bmi));
     }
 }
