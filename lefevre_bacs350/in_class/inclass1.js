@@ -28,7 +28,7 @@ while(x){
         x = false;
     }
     else if(isNaN(input) || input < 0){
-        console.log("Invalid input. Input must be a number or QUIT to exit");
+        console.log("Invalid input. Input must be a number or QUIT to exit.");
     }
     else{
         let bmi = parseFloat(input);
